@@ -1,9 +1,8 @@
-import express from "express";
-const app = express();
-const port = 3000;
+import app from "./app.js";
+import {port} from "./config.js";
 
 app.get("/", (req, res) => {
-    res.send("Welcome");
+    res.render("home.ejs");
 });
 
 app.listen(port, () => {
